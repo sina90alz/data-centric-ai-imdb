@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data files (important — don’t push datasets)
+data/raw/
+data/processed/
+data/eval/
+
+# Reports images
+reports/img/
+
+# Environment variables
+.env
+
+# Build
+dist/
+build/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Large artifacts
+*.parquet
+*.csv
+
+# Temporary files
+*.tmp
