@@ -10,6 +10,7 @@ __pycache__/
 .venv/
 venv/
 env/
+.venv311/
 
 # IDE
 .vscode/
@@ -32,6 +33,10 @@ data/eval/
 
 # Reports images
 reports/img/
+
+# Great Expectations uncommitted directory (contains local config and validation results)
+gx/uncommitted/
+gx/plugins/
 
 # Environment variables
 .env

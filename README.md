@@ -144,9 +144,23 @@ https://huggingface.co/datasets/stanfordnlp/imdb
 
 ---
 
+## Data Quality (Great Expectations)
+
+We enforce a data contract on the raw IMDb parquet splits using Great Expectations.
+
+Run:
+- `python -m scripts.ge_01_build_suite_raw` (build/update suite)
+- `python -m scripts.ge_02_validate_raw` (validate train/test + write reports)
+
+Outputs:
+- `great_expectations/expectations/imdb_raw_suite.json`
+- `reports/ge_validation_raw.md`
+- `reports/ge_validation_raw.json`
+
+---
+
 ## ⭐ Future Improvements
 
-- Add Great Expectations validation
 - Add DVC for dataset versioning
 - Add automated data quality checks
 - Add CI pipeline
