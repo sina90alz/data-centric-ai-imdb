@@ -55,7 +55,7 @@ def main():
     if missing:
         raise ValueError(f"Missing required columns: {sorted(missing)}")
 
-    X = df["text"].astype(str).tolist()
+    X = df["text"].astype(str)
     y = df["label"].astype(int).to_numpy()
 
     model = build_model()

@@ -1,0 +1,15 @@
+{
+  "train_rows": 25000,
+  "flagged_issues": 559,
+  "issue_rate": 0.02236,
+  "columns_in_output": [
+    "id",
+    "source",
+    "label",
+    "label_given",
+    "label_pred",
+    "is_label_issue",
+    "label_quality",
+    "text"
+  ]
+}
