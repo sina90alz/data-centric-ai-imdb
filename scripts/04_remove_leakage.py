@@ -5,8 +5,8 @@ import pandas as pd
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--train_path", default="data/raw/imdb_train.parquet")
-    p.add_argument("--test_path", default="data/raw/imdb_test.parquet")
+    p.add_argument("--train_path", default="data/processed/imdb_train_clean.parquet")
+    p.add_argument("--test_path", default="data/processed/imdb_test_clean.parquet")
     p.add_argument("--out_test_path", default="data/processed/imdb_test_noleak.parquet")
     p.add_argument("--report_path", default="reports/leakage_fix.md")
     p.add_argument("--use_clean_text", action="store_true",
