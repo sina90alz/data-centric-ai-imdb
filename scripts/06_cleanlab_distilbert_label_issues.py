@@ -18,7 +18,7 @@ from transformers import (
 )
 
 
-TRAIN_PATH = Path("data/raw/imdb_train.parquet")
+TRAIN_PATH = Path("data/processed/imdb_train_clean.parquet")
 OUT_CSV = Path("reports/cleanlab_distilbert_label_issues.csv")
 OUT_MD = Path("reports/cleanlab_distilbert_label_issues.md")
 OUT_JSON = Path("reports/cleanlab_distilbert_label_issues_summary.json")
@@ -32,13 +32,13 @@ def softmax_np(x: np.ndarray) -> np.ndarray:
 
 
 def build_hf_dataset(texts: list[str], labels: list[int]) -> Dataset:
-    return Dataset.from_dict({"text": texts, "label": labels})
+    return Dataset.from_dict({"text_clean": texts, "label": labels})
 
 
 def tokenize_dataset(ds: Dataset, tokenizer):
     def tok(batch):
         return tokenizer(
-            batch["text"],
+            batch["text_clean"],
             truncation=True,
             padding="max_length",
             max_length=256,

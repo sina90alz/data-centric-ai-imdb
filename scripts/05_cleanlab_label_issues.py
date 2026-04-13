@@ -11,7 +11,7 @@ from sklearn.linear_model import LogisticRegression
 from cleanlab.classification import CleanLearning
 
 
-TRAIN_PATH = Path("data/raw/imdb_train.parquet")
+TRAIN_PATH = Path("data/processed/imdb_train_clean.parquet")
 OUT_CSV = Path("reports/cleanlab_label_issues.csv")
 OUT_MD = Path("reports/cleanlab_label_issues.md")
 OUT_JSON = Path("reports/cleanlab_label_issues_summary.json")
@@ -50,12 +50,12 @@ def main():
 
     df = pd.read_parquet(TRAIN_PATH)
 
-    required = {"id", "text", "label", "source"}
+    required = {"id", "text_clean", "label", "source"}
     missing = required - set(df.columns)
     if missing:
         raise ValueError(f"Missing required columns: {sorted(missing)}")
 
-    X = df["text"].astype(str)
+    X = df["text_clean"].astype(str)
     y = df["label"].astype(int).to_numpy()
 
     model = build_model()
