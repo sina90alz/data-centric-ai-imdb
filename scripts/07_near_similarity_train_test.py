@@ -10,14 +10,14 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.neighbors import NearestNeighbors
 
 
-TRAIN_PATH = Path("data/raw/imdb_train.parquet")
-TEST_PATH = Path("data/raw/imdb_test.parquet")
+TRAIN_PATH = Path("data/processed/imdb_train_clean.parquet")
+TEST_PATH = Path("data/processed/imdb_test_clean.parquet")
 
 OUT_CSV = Path("reports/train_test_near_similarity.csv")
 OUT_JSON = Path("reports/train_test_near_similarity_summary.json")
 OUT_MD = Path("reports/train_test_near_similarity.md")
 
-TEXT_COL = "text"
+TEXT_COL = "text_clean"
 TRAIN_ID_COL = "id"
 TEST_ID_COL = "id"
 LABEL_COL = "label"
