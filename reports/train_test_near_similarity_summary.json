@@ -1,0 +1,26 @@
+{
+  "train_rows": 25000,
+  "test_rows": 25000,
+  "test_rows_after_exact_overlap_removal": 24877,
+  "exact_overlap_unique_texts": 123,
+  "exact_overlap_test_rows_removed": 123,
+  "top_k": 3,
+  "similarity_threshold": 0.9,
+  "vectorizer": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.95,
+    "max_features": 30000,
+    "strip_accents": "unicode"
+  },
+  "suspicious_pairs": 2,
+  "pairs_ge_0_85": 5,
+  "pairs_ge_0_9": 2,
+  "pairs_ge_0_95": 1,
+  "conflicting_label_pairs_ge_0_85": 0,
+  "conflicting_label_pairs_ge_0_9": 0,
+  "conflicting_label_pairs_ge_0_95": 0
+}
