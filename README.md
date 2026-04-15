@@ -334,21 +334,6 @@ python -m scripts.07_near_similarity_train_test.py
 
 ---
 
-## ✅ What's Done Well
-
-1. **Data-centric mindset** — every script focuses on understanding & improving data
-2. **Efficient storage** — Parquet format with type safety
-3. **Traceability** — `text_clean` column alongside original `text`
-4. **Conservative fixes** — only removes from test, never train; audit reports document changes
-5. **Two-layer label detection** — fast (TF-IDF) + accurate (DistilBERT) with proper OOF CV
-6. **Great Expectations** — contractual validation with saved, reusable suite
-7. **Reports committed** — findings preserved without re-running scripts
-8. **Fail-fast errors** — scripts raise `ValueError` if preconditions violated
-9. **Reproducible** — consistent `random_state=42` / `seed=42` throughout
-10. **Modular code** — reusable `cleaning.py` in `src/` module
-
----
-
 ## 📚 Dataset
 
 **IMDb Movie Reviews Dataset**  
